@@ -1,0 +1,10 @@
+Log Analysis Report:
+====================
+Occurrences of "ERROR": 2
+Occurrences of "WARNING": 1
+
+Matching Log Entries:
+----------------------
+WARNING: Disk space running low.
+ERROR: Failed to connect to database.
+ERROR: Null pointer exception occurred.
