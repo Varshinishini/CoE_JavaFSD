@@ -5,11 +5,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
-//import com.feeapp.db.DBConnection;
+
 
 public class AdminService {
     
-    // Add new accountant
+    
     public static void addAccountant(String name, String email, String phone, String password) {
         try (Connection conn = DBConnection.getConnection()) {
             String query = "INSERT INTO accountant (name, email, phone, password) VALUES (?, ?, ?, ?)";
@@ -25,7 +25,7 @@ public class AdminService {
         }
     }
 
-    // View existing accountants
+    
     public static void viewAccountants() {
         try (Connection conn = DBConnection.getConnection()) {
             String query = "SELECT * FROM accountant";
@@ -44,7 +44,7 @@ public class AdminService {
         }
     }
 
-    // Edit accountant details
+    
     public static void editAccountant(int id, String name, String email, String phone, String password) {
         try (Connection conn = DBConnection.getConnection()) {
             String query = "UPDATE accountant SET name=?, email=?, phone=?, password=? WHERE id=?";
@@ -65,7 +65,7 @@ public class AdminService {
         }
     }
 
-    // Delete accountant
+    
     public static void deleteAccountant(int id) {
         try (Connection conn = DBConnection.getConnection()) {
             String query = "DELETE FROM accountant WHERE id=?";
