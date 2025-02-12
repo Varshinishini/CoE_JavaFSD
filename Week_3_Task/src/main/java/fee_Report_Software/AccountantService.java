@@ -7,11 +7,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
-//import com.feeapp.db.DBConnection;
+
 
 public class AccountantService {
 
-    // Add new student
+    
     public static void addStudent(String name, String email, String course, double fee, double paid, String address, String phone) {
         try (Connection conn = DBConnection.getConnection()) {
             double due = fee - paid;
@@ -32,7 +32,7 @@ public class AccountantService {
         }
     }
 
-    // View all students
+    
     public static void viewStudents() {
         try (Connection conn = DBConnection.getConnection()) {
             String query = "SELECT * FROM student";
@@ -56,7 +56,7 @@ public class AccountantService {
         }
     }
 
-    // Edit student details
+    
     public static void editStudent(int id, String name, String email, String course, double fee, double paid, String address, String phone) {
         try (Connection conn = DBConnection.getConnection()) {
             double due = fee - paid;
@@ -99,14 +99,14 @@ public class AccountantService {
         }
     }
 
-    // Check due fees
+    
     public static void checkDueFee() {
         try (Connection conn = DBConnection.getConnection()) {
             String query = "SELECT * FROM student WHERE due > 0";
             PreparedStatement pstmt = conn.prepareStatement(query);
             ResultSet rs = pstmt.executeQuery();
 
-            System.out.println("\n🔹 Students with Due Fees:");
+            System.out.println("\n Students with Due Fees:");
             while (rs.next()) {
                 System.out.println("ID: " + rs.getInt("id") +
                                    ", Name: " + rs.getString("name") +
