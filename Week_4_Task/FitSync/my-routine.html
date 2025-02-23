@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Routine</title>
+    <link rel="stylesheet" href="Doc/css/my-routine.css">
+    <script src="Doc/js/my-routine.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>My Routine</h1>
+        <div id="routine-list">
+            <!-- Routines will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- ✨ Edit Routine Modal -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Routine</h2>
+            <form id="edit-form">
+                <label for="edit-type">Routine Type:</label>
+                <input type="text" id="edit-type" required>
+
+                <label for="edit-duration">Duration (mins):</label>
+                <input type="number" id="edit-duration" required>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

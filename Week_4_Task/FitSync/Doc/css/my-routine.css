@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #101119;
+    --secondary-color: #272832;
+    --accent-color: #0071FF;
+    --text-color: #c9c9c9;
+    --success-color: #4CAF50;
+    --danger-color: #FF4C4C;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    background: url('my-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    color: orangered;
+    font-size: 50px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.routine-date {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-top: 20px;
+}
+
+.routine-item {
+    background: var(--secondary-color);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.routine-item:hover {
+    transform: scale(1.02);
+}
+
+.routine-details {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.edit-btn {
+    background: var(--accent-color);
+    color: white;
+}
+
+.complete-btn {
+    background: var(--success-color);
+    color: white;
+}
+
+.delete-btn {
+    background: var(--danger-color);
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* ✨ Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: #1f1f1f;
+    color: white;
+}
+
+button[type="submit"] {
+    background: var(--accent-color);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}

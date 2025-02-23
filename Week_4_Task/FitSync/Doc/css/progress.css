@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #101119;
+    --secondary-color: #272832;
+    --accent-color: #0071FF;
+    --text-color: #c9c9c9;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    background: url('progr-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+h1 {
+    color: var(--accent-color);
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+/* ✨ Animation for Fade-in Effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ✨ Smooth Chart Animation */
+canvas {
+    width: 100% !important;
+    max-width: 600px;
+    height: 350px !important; /* Fixed height */
+    display: block;
+    margin: auto;
+    animation: popUp 1s ease-in-out;
+}
+
+
+@keyframes popUp {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}

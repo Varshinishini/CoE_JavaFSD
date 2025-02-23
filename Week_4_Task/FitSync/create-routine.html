@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Routine</title>
+    <link rel="stylesheet" href="Doc/css/create-routine.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Create a New Routine</h1>
+        <form id="routine-form">
+            <label for="routine-type">Select Routine:</label>
+            <select id="routine-type">
+                <option value="Cardio">Cardio</option>
+                <option value="Strength">Strength</option>
+                <option value="Yoga">Yoga</option>
+                <option value="Flexibility">Flexibility</option>
+            </select>
+
+            <label for="duration">Duration (minutes):</label>
+            <input type="number" id="duration" required>
+
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" required>
+
+            <button type="submit">Add Routine</button>
+        </form>
+
+        <div class="suggestions">
+            <h2>Suggested Workouts</h2>
+            <ul>
+                <li>🔥 HIIT - 20 min Fat Burn</li>
+                <li>💪 Strength - Full Body Routine</li>
+                <li>🧘 Yoga - Relaxation Flow</li>
+                <li>🏃 Cardio - 30 min Run</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="Doc/js/create-routine.js"></script>
+</body>
+</html>
